@@ -38,7 +38,7 @@ It is defined with an attrset, here is an example for the NixOS kit:
 The _kit_'s `eval` function should output an attrset (the final config), with the `lib.extendWith` function to re-evaluate the current _kit_ with an additional module to
 tweak/refine the config with more options/_presets_/_modules_ if needed (can be chained!).
 
-Exposed in a flake as `kit.forMYTECH` (e.g. `kit.forNixOS`)
+Exposed in a flake as `kits.forMYTECH` (e.g. `kits.forNixOS`)
 
 Example:
 - the NixOS module system
@@ -51,8 +51,8 @@ Example:
 A **Module** is the low-level building block for a _kit_.
 It contains options declaration/implementation on a specific topic.
 
-Exposed in a flake as `kitModules.forMYTECH.MYMODULE`
-(e.g. `kitModules.forNixOS.hello-world`)
+Exposed in a flake as `modules.MYTECH.MYMODULE`
+(e.g. `modules.nixos.hello-world`)
 
 Examples:
 - A NixOS module for `nginx` or `postgresql`.
