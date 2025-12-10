@@ -1,5 +1,5 @@
-{lib}:
+{ lib }:
 
 {
-  kitsys = import ./kit-system { inherit lib; };
+  kitsys-v1 = import ./kitsys-v1 { inherit lib; };
 }

@@ -121,7 +121,7 @@ in lib.fix (kitsys: {
     extraSpecialArgs ? {},
 
     # Set to `false` if `lib` option is already defined in `self.baseModules` to avoid conflicting
-    # definitions.
+    # definitions (e.g. when using an existing module system).
     declareLibOption ? true,
 
     # Set to `false` if `assertions`/`warnings` options are already defined in `self.baseModules` to
