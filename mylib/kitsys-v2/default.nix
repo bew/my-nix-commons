@@ -1,6 +1,6 @@
 { lib }:
 
-{
+rec {
   # TODO: doc!
   newKit = (
     kitdefModule: let
@@ -12,5 +12,14 @@
         ];
       };
     in kitdefEvaluated.config
+  );
+
+  # TODO: doc!
+  newToolkit = (
+    toolkitDefModule:
+    newKit {
+      imports = [ toolkitDefModule ];
+      _evalConfig.baseModules = [ ../../modules/kit/toolkit-base.nix ];
+    }
   );
 }
